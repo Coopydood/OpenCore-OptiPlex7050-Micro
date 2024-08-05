@@ -10,7 +10,13 @@ OpenCore Hackintosh configuration example for the **Dell OptiPlex 7050 Micro For
 
 [![GitHub](https://img.shields.io/github/license/Coopydood/OpenCore-OptiPlex-7060?label=Licence&logo=unlicense&logoColor=white&style=for-the-badge)](https://github.com/Coopydood/OpenCore-OptiPlex-7060/blob/main/LICENSE) [![GitHub repo size](https://img.shields.io/github/repo-size/Coopydood/OpenCore-OptiPlex-7060?color=07b55b&label=Size&logo=envoy-proxy&logoColor=white&style=for-the-badge)](https://github.com/Coopydood/OpenCore-OptiPlex-7060) [![Discord](https://img.shields.io/discord/574943603466436628?color=7d86ff&label=Discord&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/WzWkSsT)
 
-<br><br>
+<br>
+
+***
+
+<img src="https://github.com/user-attachments/assets/7c066696-4b71-41aa-8f79-f51d538f9666" alt="cute lil OptiPlex 7050 Micro" width="1400"/><br>
+<p align="center"><i>The cute lil 7050 Micro running macOS!</i></p>
+
 
 ***
 
@@ -53,7 +59,7 @@ This is the version of macOS that this OpenCore configuration currently targets.
 <img align="left" width="35" height="35" src="https://github.com/Coopydood/OpenCore-Z490E-CometLake/assets/39441479/788860d8-207a-4d15-928a-ed78f08962cf"> 
 <h5>macOS Sierra</h5>
 
-<br><br>
+<br><br><br>
 
 ***
 
