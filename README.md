@@ -8,7 +8,7 @@
 OpenCore Hackintosh configuration example for the **Dell OptiPlex 7050 Micro Form Factor** with an Intel® Core™ i5-7500. 
 <br>
 
-[![GitHub](https://img.shields.io/github/license/Coopydood/OpenCore-OptiPlex7050-Micro?label=Licence&logo=unlicense&logoColor=white&style=for-the-badge)](https://github.com/Coopydood/OpenCore-OptiPlex7050-Micro/blob/main/LICENSE) [![GitHub repo size](https://img.shields.io/github/repo-size/Coopydood/OpenCore-OptiPlex7050-Micro?color=07b55b&label=Size&logo=envoy-proxy&logoColor=white&style=for-the-badge)](https://github.com/Coopydood/OpenCore-OptiPlex7050-Micro) [![Discord](https://img.shields.io/discord/574943603466436628?color=7d86ff&label=Discord&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/WzWkSsT)
+[![GitHub](https://img.shields.io/github/license/Coopydood/OpenCore-OptiPlex-7060?label=Licence&logo=unlicense&logoColor=white&style=for-the-badge)](https://github.com/Coopydood/OpenCore-OptiPlex-7060/blob/main/LICENSE) [![GitHub repo size](https://img.shields.io/github/repo-size/Coopydood/OpenCore-OptiPlex-7060?color=07b55b&label=Size&logo=envoy-proxy&logoColor=white&style=for-the-badge)](https://github.com/Coopydood/OpenCore-OptiPlex-7060) [![Discord](https://img.shields.io/discord/574943603466436628?color=7d86ff&label=Discord&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/WzWkSsT)
 
 <br><br>
 
@@ -32,7 +32,7 @@ This is the version of OpenCore used, including bundled files. The included ``co
 <img align="left" src="https://github.com/Coopydood/ultimate-macOS-KVM/assets/39441479/8f69f9b9-cf23-4e8b-adf3-95862a23e2ba" height=520 width=2 /> 
 <!-- CHANGE THE HEIGHT WHEN ADDING OR REMOVING SUPPORTED OSES TO THE LIST (Default: 520) -->
 
-<h3>macOS Sonoma<br><sub>14.5</sub></h3>
+<h3>macOS Sonoma<br></h3>
 
 This is the version of macOS that this OpenCore configuration currently targets. Other versions of macOS that are compatible with it are listed below.<br>
 
@@ -53,7 +53,7 @@ This is the version of macOS that this OpenCore configuration currently targets.
 <img align="left" width="35" height="35" src="https://github.com/Coopydood/OpenCore-Z490E-CometLake/assets/39441479/788860d8-207a-4d15-928a-ed78f08962cf"> 
 <h5>macOS Sierra</h5>
 
-<br>
+<br><br>
 
 ***
 
@@ -87,6 +87,7 @@ This is the version of macOS that this OpenCore configuration currently targets.
 - [ ] Hyperthreading
 - [x] Virtualisation
 - [x] Memory bank configuration
+- [x] Boot chime
   
 <br>
 
