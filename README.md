@@ -124,7 +124,7 @@ The specs of the main system that the OpenCore configuration targets.
 | **Motherboard** |                  Dell                 |
 |-----------------|:-------------------------------------------------------------:|
 | **CPU**         |                      Intel® Core™ i5-7500                     |
-| **Chipset**     |                             OptiPlex 7050                            |
+| **Chipset**     |                             OptiPlex 7050 MFF                            |
 | **Generation**  |                           Kaby Lake                          |
 | **Memory**      |                       8 GB DDR4                       |
 | **Storage**     |                     256 GB SATA SSD                    |
@@ -155,10 +155,10 @@ Internal Speakers
 
 | **Key**                  | **Type** |   **Value**  |
 |--------------------------|:--------:|:------------:|
-| AAPL,slot-name           |   String | ``Internal`` |
-| device-type              |   String | ``Audio device`` |
-| hda-gfx                  |   Data   | ``000B0A0D`` |
-| layout-id                |   Data   | ``0B000000`` |
+| AAPL,slot-name           |   String | ``Internal@0,31,3`` |
+| device_type              |   String | ``Audio device`` |
+| model                  |   String   | ``200 Series PCH HD Audio`` |
+| layout-id                |   Data   | ``11000000`` |
 
 <br>
 
@@ -166,12 +166,21 @@ Internal Speakers
 
 Intel HD Graphics 630
 
-| **Key**                  | **Type** |   **Value**  |
-|--------------------------|:--------:|:------------:|
-| AAPL,ig-platform-id      |   Data   | ``00001259`` |
-| device-id                |   Data   | `` `` |
-| framebuffer-patch-enable |   Data   | ``01000000`` |
-| framebuffer-stolenmem    |   Data   | ``00003001`` |
+| **Key**                  	| **Type** 	| **Value**                 	|
+|--------------------------	|:----------:|:---------------------------:|
+| AAPL,ig-platform-id      	|   Data   	|        ``00001259``       	|
+| device-id                	|   Data   	|        ``12590000``       	|
+| disable-agdc             	|   Data   	|        ``01000000``       	|
+| enable-hdmi-dividers-fix 	|   Data   	|        ``01000000``       	|
+| enable-hdmi20            	|   Data   	|        ``01000000``       	|
+| framebuffer-con1-enable  	|   Data   	|        ``01000000``       	|
+| framebuffer-con1-type    	|   Data   	|        ``00080000``       	|
+| framebuffer-con2-enable  	|   Data   	|        ``01000000``       	|
+| framebuffer-con2-type    	|   Data   	|        ``04000000``       	|
+| framebuffer-patch-enable 	|   Data   	|        ``01000000``       	|
+| framebuffer-stolenmem    	|   Data   	|        ``00003001``       	|
+| rps-control              	|   Data   	|        ``01000000``       	|
+| model                    	|  String  	| ``Intel HD Graphics 630`` 	|
 
 <br>
 
@@ -253,7 +262,7 @@ Contents stored in NVRAM.
 |---------------------------|:--------:|:------------------------------------------------------------------------------:|
 | ForceDisplayRotationInEFI |  Number  |                                        0                                       |
 | SystemAudioVolume         |   Data   |                                     ``46``                                     |
-| boot-args                 |  String  | keepsyms=1 debug=0x100 itlwm_cc=GB igfxonln=1 revpatch=sbvmm |
+| boot-args                 |  String  | keepsyms=1 debug=0x100 itlwm_cc=GB revpatch=sbvmm |
 | csr-active-config         |   Data   |                                  ``00000000``                                  |
 | prev-lang-diags:kbd       |   Data   |                                 ``656E2D47 42``                                |
 | prev-lang:kbd             |   Data   |                               ``656E2D47 423A32``                              |                                      |
