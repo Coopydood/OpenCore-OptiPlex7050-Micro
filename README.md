@@ -102,8 +102,8 @@ This is the version of macOS that this OpenCore configuration currently targets.
 ## Problems
 
 <ul>
-<li><b>TBD</b></li>
-TBD
+<li><b>Sleep / Wake</b></li>
+Unfortunately, sleep is broken on this system at the moment. The system itself can go into and out of the sleep state, but the monitor never wakes up. My <a href="https://github.com/Coopydood/OpenCore-OptiPlex7060-SFF">other OptiPlex hacc</a> does this too. I'll investigate this!
 
 </ul>
 
@@ -129,9 +129,12 @@ The specs of the main system that the OpenCore configuration targets.
 ## ACPI
 
 SSDTs used:
-- SSDT-1
-- SSDT-2
-- SSDT-3
+- SSDT-EC-USBX-DESKTOP
+- SSDT-HPET *
+- SSDT-PLUG
+
+> [!IMPORTANT]
+> ``SSDT-HPET`` was compiled by me specifically for this machine model. Along with several ACPI patches, this is used to fix **onboard audio, including internal speakers.** Without it, macOS will show as having no built-in audio devices.  
   
 ***
 
@@ -139,31 +142,31 @@ SSDTs used:
 
 The following tables display the added PCI devices and their child keys.
 
+### PciRoot(0x0)/Pci(0x1F,0x3)
 
-### PciRoot(0x0)/Pci(0x2,0x0)
-
-EXAMPLE
+Internal Speakers
 
 | **Key**                  | **Type** |   **Value**  |
 |--------------------------|:--------:|:------------:|
-| AAPL,ig-platform-id      |   Data   | ``0000923E`` |
-| device-id                |   Data   | ``923E7000`` |
-| framebuffer-fbmem        |   Data   | ``00009000`` |
-| framebuffer-patch-enable |   Data   | ``01000000`` |
-| framebuffer-stolenmem    |   Data   | ``00003001`` |
-| framebuffer-unifiedmem   |   Data   | ``00000080`` |
-| hda-gfx                  |  String  |   onboard-1  |
+| AAPL,slot-name           |   String | ``Internal`` |
+| device-type              |   String | ``Audio device`` |
+| hda-gfx                  |   Data   | ``000B0A0D`` |
+| layout-id                |   Data   | ``0B000000`` |
 
 <br>
 
-### PciRoot(0x0)/Pci(0x1b,0x0)
+### PciRoot(0x0)/Pci(0x2,0x0)
 
-Apple ALC
+Intel HD Graphics 630
 
 | **Key**                  | **Type** |   **Value**  |
 |--------------------------|:--------:|:------------:|
-| AAPL,ig-platform-id      |   Data   | ``0300220D`` |
-| layout-id                |   Data   | ``01000000`` |
+| AAPL,ig-platform-id      |   Data   | ``00001259`` |
+| device-id                |   Data   | `` `` |
+| framebuffer-patch-enable |   Data   | ``01000000`` |
+| framebuffer-stolenmem    |   Data   | ``00003001`` |
+
+<br>
 
 
 ***
@@ -177,7 +180,27 @@ The following shows the kernel configuration.
 Kexts used:
 - Lilu
 - WhateverGreen
-- ...
+- AppleALC
+- IntelMausi
+- RestrictEvents
+- RTCMemoryFixup
+- SMCProcessor
+- SMCSuperIO
+- SMCDellSensors
+- VirtualSMC
+- HibernationFixup
+- FeatureUnlock
+- IntelBluetoothFirmware
+- IntelBTPatcher
+- BlueToolFixup
+- OptiPlex7050_MFF_USBMap *
+- ~~USBMapDummy~~
+
+> [!IMPORTANT]
+> The ``OptiPlex7050_MFF_USBMap.kext`` is the USB map created manually by me on my own system. It may or may not work for other 7050 Micro machines. If it doesn't work, please disable it.
+
+> [!TIP]
+> In case you need it for your own mapping, ``USBMapDummy.kext`` has been left included but disabled, so you can enable it if you need it.
 
 
 ### Patches
@@ -188,7 +211,7 @@ None
 
 ## Security
 
-**SecureBootModel 》** SECURE_BOOT_MODEL
+**SecureBootModel 》** ``j174``
 
 **Vault 》** Optional
 
@@ -221,15 +244,21 @@ Contents stored in NVRAM.
 
 | **Key**                   | **Type** |                                    **Value**                                   |
 |---------------------------|:--------:|:------------------------------------------------------------------------------:|
-| boot-args                 |  String  | TBD |
+| ForceDisplayRotationInEFI |  Number  |                                        0                                       |
+| SystemAudioVolume         |   Data   |                                     ``46``                                     |
+| boot-args                 |  String  | keepsyms=1 debug=0x100 itlwm_cc=GB igfxonln=1 revpatch=sbvmm |
+| csr-active-config         |   Data   |                                  ``00000000``                                  |
+| prev-lang-diags:kbd       |   Data   |                                 ``656E2D47 42``                                |
+| prev-lang:kbd             |   Data   |                               ``656E2D47 423A32``                              |                                      |
+| StartupMute               |   Data   |                                     ``00``                                     |
 
 ***
 
 ## SMBIOS
 
-### TBD
+### Macmini8,1
 
-TBD
+As it's a cute lil boi, it makes sense to have it emulate a Mac mini, even though its closest SMBIOS would be the ``iMac18,2`` - which isn't even supported anymore.
 
 ***
 
@@ -241,17 +270,102 @@ Drivers in use:
 
 - HFSPlus
 - OpenRuntime
-- ...
+- OpenCanopy
+- AudioDxe *
+
+>[!NOTE]
+``AudioDxe`` is loaded so that OpenCore can make a boot chime on startup!
   
 ***
 
-## Gallery
+## Post-Install Tweaks
 
-TBD
+This is just a collection of my post-install tweaks I apply after installing macOS. They're not really related to OpenCore or the overall functionality of the configuration.
+
+<details><summary><h4>Dark Menu Bar and Dock</h4></summary>
+
+Okay, so I'm a bit of a macOS boomer. Having used macOS since long before Mojave's *dark mode*, I'm accustomed to the regular light appearance of the windows - but I always enabled the "Dark menu bar and dock" option as I loved the look. While I still like dark mode (and use it on iOS), the hybrid light/dark mode on macOS is still my favourite!
+
+The following commands restore that functionality:
+
+**Window Server**
+```sh
+defaults write -g NSRequiresAquaSystemAppearance -bool Yes
+```
+
+**Notification Centre**
+```sh
+defaults write com.apple.notificationcenterui NSRequiresAquaSystemAppearance -bool No
+```
+
+**Control Centre**
+```sh
+defaults write com.apple.controlcenterui NSRequiresAquaSystemAppearance -bool No
+```
+
+**About This Mac + System Profiler**
+```sh
+defaults write com.apple.SystemProfiler.AboutExtension NSRequiresAquaSystemAppearance -bool No
+defaults write com.apple.SystemProfiler.AboutExtension NSRequiresAquaSystemAppearance -bool No
+```
+
+</details>
+
+<details><summary><h4>Show Hidden Files</h4></summary>
+
+Does what it says on the tin. Shows all files, including hidden ones, in the Finder.
+
+```sh
+defaults write com.apple.Finder AppleShowAllFiles YES
+killall Finder
+```
+</details>
+
+
+<details><summary><h4>AirDrop over Ethernet</h4></summary>
+
+Makes AirDrop scan Ethernet too!
+
+```sh
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
+killall Finder
+```
+</details>
+
+<details><summary><h4>Frosted Glass Terminal Theme</h4></summary>
+
+Some macOS eye candy.
+
+```sh
+curl -OL https://raw.githubusercontent.com/Coopydood/OpenCore-Z490E-CometLake/main/EXTRAS/HyperTerm.terminal
+```
+
+Import through Terminal's preferences.
+</details>
+
+
+***
+
+## Gallery
+<img src="https://github.com/user-attachments/assets/4cb5b688-1888-4ef7-b5e2-c071d051d5df" alt="cute lil OptiPlex 7050 Micro" width="550"/><br><br>
+<img src="https://github.com/user-attachments/assets/6b8eccff-201e-426a-8550-50ed8c49445e" width="30%"></img> <img src="https://github.com/user-attachments/assets/8a2104c2-9ce6-4e85-a11f-c3ed9727b0bb" width="60%"></img> <img src="https://github.com/user-attachments/assets/7b29f8a0-4f29-46f6-9707-48746f4947d4" width="45%"></img> <img src="https://github.com/user-attachments/assets/ff6e717a-3f27-4f0d-9224-6b3c7da3f777" width="45%"></img> <img src="https://github.com/user-attachments/assets/358c3746-3b55-4f46-b0dd-053d55f4c0c0" width="45%"></img> <img src="https://github.com/user-attachments/assets/0718cacf-50c7-4dfa-aa36-be3a36b01089" width="45%"></img> <img src="https://github.com/user-attachments/assets/a09a2306-59d2-4b41-906c-401386fa8788" width="45%"></img> <img src="https://github.com/user-attachments/assets/c7170196-c95b-436f-9bc7-365ba2a0e69b" width="45%"></img>
 
 ***
 
 ## Disclaimer
 
-TBD
+This repo is simply a dump of my current and up-to-date OpenCore stuff that I use on my machine. 
 
+Feel free to use it as an example and modify it however you'd like, but please don't expect it to "just work" - because it *probably* won't.
+
+***
+
+## Contribute!
+
+If you've found a way to make the configuration better, or have solved issues outlined in the **Problems** section, please share your changes on GitHub for us all to use! Thank you!
+
+***
+
+<p align="center">
+  <img src="https://github.com/Coopydood/ultimate-macOS-KVM/assets/39441479/39d78d4b-8ce8-44f4-bba7-fefdbf2f80db" width="10%"> </img>
+</p>
