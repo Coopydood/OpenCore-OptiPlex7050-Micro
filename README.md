@@ -347,7 +347,7 @@ Import through Terminal's preferences.
 ***
 
 ## Gallery
-<img src="https://github.com/user-attachments/assets/4cb5b688-1888-4ef7-b5e2-c071d051d5df" alt="cute lil OptiPlex 7050 Micro" width="550"/><br><br>
+<img src="https://github.com/user-attachments/assets/4cb5b688-1888-4ef7-b5e2-c071d051d5df" alt="cute lil OptiPlex 7050 Micro" width="1050"/><br><br>
 <img src="https://github.com/user-attachments/assets/6b8eccff-201e-426a-8550-50ed8c49445e" width="30%"></img> <img src="https://github.com/user-attachments/assets/8a2104c2-9ce6-4e85-a11f-c3ed9727b0bb" width="60%"></img> <img src="https://github.com/user-attachments/assets/7b29f8a0-4f29-46f6-9707-48746f4947d4" width="45%"></img> <img src="https://github.com/user-attachments/assets/ff6e717a-3f27-4f0d-9224-6b3c7da3f777" width="45%"></img> <img src="https://github.com/user-attachments/assets/358c3746-3b55-4f46-b0dd-053d55f4c0c0" width="45%"></img> <img src="https://github.com/user-attachments/assets/0718cacf-50c7-4dfa-aa36-be3a36b01089" width="45%"></img> <img src="https://github.com/user-attachments/assets/a09a2306-59d2-4b41-906c-401386fa8788" width="45%"></img> <img src="https://github.com/user-attachments/assets/c7170196-c95b-436f-9bc7-365ba2a0e69b" width="45%"></img>
 
 ***
