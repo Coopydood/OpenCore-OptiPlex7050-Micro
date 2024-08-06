@@ -104,7 +104,14 @@ This is the version of macOS that this OpenCore configuration currently targets.
 <ul>
 <li><b>Sleep / Wake</b></li>
 Unfortunately, sleep is broken on this system at the moment. The system itself can go into and out of the sleep state, but the monitor never wakes up. My <a href="https://github.com/Coopydood/OpenCore-OptiPlex7060-SFF">other OptiPlex hacc</a> does this too. I'll investigate this!
+  
+<br><br>
 
+<li><b><s>External Audio and HDMI Output</s> ‏‏‎ ‏‏‎ ‎‎‏‏‎ ‎ 🎉 FIXED!</b></li>
+<s>Unfortunately, external audio - both DisplayPort and HDMI - doesn't work. HDMI output is also broken, with the system failing to boot with only HDMI plugged in. Strangely, once booted, the system does half-work with HDMI, but is locked at low resolution.</s>
+
+> [!TIP]
+> This was fixed by using a combo of DeviceProperties entries from <a href="https://github.com/AurelienAudero/Intel-i5-7400-Hackintosh-EFI">this excellent repo</a>!
 </ul>
 
 
