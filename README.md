@@ -262,7 +262,7 @@ Contents stored in NVRAM.
 |---------------------------|:--------:|:------------------------------------------------------------------------------:|
 | ForceDisplayRotationInEFI |  Number  |                                        0                                       |
 | SystemAudioVolume         |   Data   |                                     ``46``                                     |
-| boot-args                 |  String  | keepsyms=1 debug=0x100 itlwm_cc=GB revpatch=sbvmm |
+| boot-args                 |  String  | keepsyms=1 debug=0x100 -cdfon -igfxmpc -igfxcdc igfxrpsc=1 itlwm_cc=GB revpatch=sbvmm |
 | csr-active-config         |   Data   |                                  ``00000000``                                  |
 | prev-lang-diags:kbd       |   Data   |                                 ``656E2D47 42``                                |
 | prev-lang:kbd             |   Data   |                               ``656E2D47 423A32``                              |                                      |
