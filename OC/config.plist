@@ -1730,7 +1730,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100 itlwm_cc=GB revpatch=sbvmm</string>
+				<string>keepsyms=1 debug=0x100 -cdfon -igfxmpc -igfxcdc igfxrpsc=1 itlwm_cc=GB revpatch=sbvmm</string>
 				<key>prev-lang-diags:kbd</key>
 				<data>ZW4tR0I=</data>
 				<key>prev-lang:kbd</key>
