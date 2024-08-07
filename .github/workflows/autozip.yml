@@ -5,7 +5,7 @@ on:
   push:
     paths-ignore:
         - "EXTRAS/**"
-        - "EFI.zip"
+        - "OptiPlex7050_MFF_EFI.zip"
 
 jobs:
   zip-files:
@@ -23,7 +23,7 @@ jobs:
         with:
           # The arguments for the `git add` command (see the paragraph below for more info)
           # Default: '.'
-          add: './EFI.zip'
+          add: './OptiPlex7050_MFF_EFI.zip'
       
           # The name of the user that will be displayed as the author of the commit.
           # Default: depends on the default_author input
@@ -63,7 +63,7 @@ jobs:
       
           # The message for the commit.
           # Default: 'Commit from GitHub Actions (name of the workflow)'
-          message: 'Create EFI.zip'
+          message: 'Create EFI zip file'
       
           # If this input is set, the action will push the commit to a new branch with this name.
           # Default: ''
