@@ -112,6 +112,15 @@ Unfortunately, sleep is broken on this system at the moment. The system itself c
 
 > [!TIP]
 > This was fixed by using a combo of DeviceProperties entries from <a href="https://github.com/AurelienAudero/Intel-i5-7400-Hackintosh-EFI">this excellent repo</a>!
+
+<br><br>
+
+<li><b><s>VGA Output</s> ‏‏‎ ‏‏‎ ‎‎‏‏‎ ‎ 🎉 FIXED!</b></li>
+<s>The "option port" of my 7050 happens to be a jurassic-era VGA connector. As probably expected, macOS doesnt work with the VGA port.</s>
+
+> [!TIP]
+> This was fixed using custom connector patches in DeviceProperties!
+
 </ul>
 
 
@@ -128,7 +137,7 @@ The specs of the main system that the OpenCore configuration targets.
 | **Generation**  |                           Kaby Lake                          |
 | **Memory**      |                       8 GB DDR4                       |
 | **Storage**     |                     256 GB SATA SSD                    |
-| **GPU**         | Intel HD 630 |
+| **GPU**         | Intel HD Graphics 630 |
 | **NIC**         |                  Intel I219-LM                  |
 
 ***
@@ -173,10 +182,12 @@ Intel HD Graphics 630
 | disable-agdc             	|   Data   	|        ``01000000``       	|
 | enable-hdmi-dividers-fix 	|   Data   	|        ``01000000``       	|
 | enable-hdmi20            	|   Data   	|        ``01000000``       	|
+| framebuffer-con0-enable  	|   Data   	|        ``01000000``       	|
+| framebuffer-con0-alldata    	|   Data   	|        `` ``       	|
 | framebuffer-con1-enable  	|   Data   	|        ``01000000``       	|
-| framebuffer-con1-type    	|   Data   	|        ``00080000``       	|
+| framebuffer-con1-alldata    	|   Data   	|        `` ``       	|
 | framebuffer-con2-enable  	|   Data   	|        ``01000000``       	|
-| framebuffer-con2-type    	|   Data   	|        ``04000000``       	|
+| framebuffer-con2-alldata    	|   Data   	|        `` ``       	|
 | framebuffer-patch-enable 	|   Data   	|        ``01000000``       	|
 | framebuffer-stolenmem    	|   Data   	|        ``00003001``       	|
 | rps-control              	|   Data   	|        ``01000000``       	|
