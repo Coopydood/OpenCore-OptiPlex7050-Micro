@@ -5,7 +5,7 @@
 
 <a href="https://coopydood.github.io/ultimate-macOS-KVM"></a><h3>OpenCore OptiPlex 7050 Micro (Kaby Lake)</h3>
 
-OpenCore Hackintosh configuration example for the **Dell OptiPlex 7050 Micro Form Factor** with an Intel® Core™ i5-7500. 
+OpenCore Hackintosh configuration example for the **Dell OptiPlex 7050 Micro Form Factor** with an Intel® Core™ i5-7500T. 
 <br>
 
 [![GitHub](https://img.shields.io/github/license/Coopydood/OpenCore-OptiPlex-7060?label=Licence&logo=unlicense&logoColor=white&style=for-the-badge)](https://github.com/Coopydood/OpenCore-OptiPlex-7060/blob/main/LICENSE) [![GitHub repo size](https://img.shields.io/github/repo-size/Coopydood/OpenCore-OptiPlex-7060?color=07b55b&label=Size&logo=envoy-proxy&logoColor=white&style=for-the-badge)](https://github.com/Coopydood/OpenCore-OptiPlex-7060) [![Discord](https://img.shields.io/discord/574943603466436628?color=7d86ff&label=Discord&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/WzWkSsT)
@@ -72,7 +72,7 @@ This is the version of macOS that this OpenCore configuration currently targets.
 
 ### Hardware
 
-- [x] iGPU (Intel HD 630)
+- [x] iGPU (Intel HD Graphics 630)
 - [x] SATA drive
 - [x] USB 3.1 (XHCI)
 - [x] Ethernet
@@ -132,7 +132,7 @@ The specs of the main system that the OpenCore configuration targets.
 
 | **Motherboard** |                  Dell                 |
 |-----------------|:-------------------------------------------------------------:|
-| **CPU**         |                      Intel® Core™ i5-7500                     |
+| **CPU**         |                      Intel® Core™ i5-7500T                     |
 | **Chipset**     |                             OptiPlex 7050 MFF                            |
 | **Generation**  |                           Kaby Lake                          |
 | **Memory**      |                       8 GB DDR4                       |
