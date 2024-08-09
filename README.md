@@ -183,11 +183,11 @@ Intel HD Graphics 630
 | enable-hdmi-dividers-fix 	|   Data   	|        ``01000000``       	|
 | enable-hdmi20            	|   Data   	|        ``01000000``       	|
 | framebuffer-con0-enable  	|   Data   	|        ``01000000``       	|
-| framebuffer-con0-alldata    	|   Data   	|        `` ``       	|
+| framebuffer-con0-alldata    	|   Data   	|        ``01050900 00080000 87010000``       	|
 | framebuffer-con1-enable  	|   Data   	|        ``01000000``       	|
-| framebuffer-con1-alldata    	|   Data   	|        `` ``       	|
+| framebuffer-con1-alldata    	|   Data   	|        ``02040A00 00040000 87010000``       	|
 | framebuffer-con2-enable  	|   Data   	|        ``01000000``       	|
-| framebuffer-con2-alldata    	|   Data   	|        `` ``       	|
+| framebuffer-con2-alldata    	|   Data   	|        ``03060A00 00040000 87010000``       	|
 | framebuffer-patch-enable 	|   Data   	|        ``01000000``       	|
 | framebuffer-stolenmem    	|   Data   	|        ``00003001``       	|
 | rps-control              	|   Data   	|        ``01000000``       	|
