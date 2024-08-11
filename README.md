@@ -24,7 +24,7 @@ OpenCore Hackintosh configuration example for the **Dell OptiPlex 7050 Micro For
 
 <img align="left" width="100" height="100" src="https://dortania.github.io/docs/latest/Logos/Logo.png">
 <img align="left" src="https://github.com/Coopydood/ultimate-macOS-KVM/assets/39441479/8f69f9b9-cf23-4e8b-adf3-95862a23e2ba" height=100 width=2 />
-<h3>OpenCore<br><sub>1.0.0</sub></h3>
+<h3>OpenCore<br><sub>1.0.1</sub></h3>
 
 This is the version of OpenCore used, including bundled files. The included ``config.plist`` targets this version.
 <br>
@@ -56,8 +56,6 @@ This is the version of macOS that this OpenCore configuration currently targets.
 <h5>macOS Mojave</h5>
 <img align="left" width="35" height="35" src="https://github.com/Coopydood/OpenCore-Z490E-CometLake/assets/39441479/bd4a791d-1ac2-4a9a-8ee0-22e4d5f88cd3"> 
 <h5>macOS High Sierra</h5>
-<img align="left" width="35" height="35" src="https://github.com/Coopydood/OpenCore-Z490E-CometLake/assets/39441479/788860d8-207a-4d15-928a-ed78f08962cf"> 
-<h5>macOS Sierra</h5>
 
 <br><br><br>
 
@@ -178,7 +176,7 @@ Intel HD Graphics 630
 | **Key**                  	| **Type** 	| **Value**                 	|
 |--------------------------	|:----------:|:---------------------------:|
 | AAPL,ig-platform-id      	|   Data   	|        ``00001259``       	|
-| device-id                	|   Data   	|        ``12590000``       	|
+| device-id                	|   Data   	|        ``1B590006``       	|
 | disable-agdc             	|   Data   	|        ``01000000``       	|
 | enable-hdmi-dividers-fix 	|   Data   	|        ``01000000``       	|
 | enable-hdmi20            	|   Data   	|        ``01000000``       	|
