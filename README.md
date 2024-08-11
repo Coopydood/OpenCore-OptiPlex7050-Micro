@@ -191,6 +191,14 @@ Intel HD Graphics 630
 | rps-control              	|   Data   	|        ``01000000``       	|
 | model                    	|  String  	| ``Intel HD Graphics 630`` 	|
 
+> [!NOTE]
+> The framebuffer connector patching was done using [this section of the WhateverGreen Intel guide](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md#intel-uhd-graphics-610-650-kaby-lake-and-amber-lake-y-processors) as a reference.
+
+> [!TIP]
+> The ``device-id`` has been set to ``1B590006`` as this fixes up some string-related cosmetics around macOS - such as changing the Metal device name from ``Intel KBL Unknown`` to ``Intel HD Graphics 630``.
+> 
+> The previous ``device-id`` (``12590000``) matches more closely but has the aforementioned cosmetic issues. Both IDs work absolutely fine.
+
 <br>
 
 
