@@ -35,7 +35,7 @@ This is the version of OpenCore used, including bundled files. The included ``co
 <img align="left" width="90" height="90" src="https://github.com/Coopydood/OpenCore-Z490E-CometLake/assets/39441479/aa49b5ba-6cca-4dab-bcfc-6bf21909e738">
 <!-- CHANGE THE IMAGE URL TO THE MAIN OS YOUR CONFIG TARGETS. IMAGE URL LIST BELOW! -->
 
-<img align="left" src="https://github.com/Coopydood/ultimate-macOS-KVM/assets/39441479/8f69f9b9-cf23-4e8b-adf3-95862a23e2ba" height=480 width=2 /> 
+<img align="left" src="https://github.com/Coopydood/ultimate-macOS-KVM/assets/39441479/8f69f9b9-cf23-4e8b-adf3-95862a23e2ba" height=580 width=2 /> 
 <!-- CHANGE THE HEIGHT WHEN ADDING OR REMOVING SUPPORTED OSES TO THE LIST (Default: 520) -->
 
 <h3>macOS Sonoma<br></h3>
@@ -57,7 +57,12 @@ This is the version of macOS that this OpenCore configuration currently targets.
 <img align="left" width="35" height="35" src="https://github.com/Coopydood/OpenCore-Z490E-CometLake/assets/39441479/bd4a791d-1ac2-4a9a-8ee0-22e4d5f88cd3"> 
 <h5>macOS High Sierra</h5>
 
-<br><br><br>
+#### Pre-Release
+
+<img align="left" width="35" height="35" src="https://github.com/user-attachments/assets/7b9b72ee-5a89-49b4-ae17-7a188ed533ab"> 
+<h5>macOS Sequoia Beta</h5><br>
+
+<br><br>
 
 ***
 
