@@ -35,7 +35,7 @@ This is the version of OpenCore used, including bundled files. The included ``co
 <img align="left" width="90" height="90" src="https://github.com/Coopydood/OpenCore-Z490E-CometLake/assets/39441479/aa49b5ba-6cca-4dab-bcfc-6bf21909e738">
 <!-- CHANGE THE IMAGE URL TO THE MAIN OS YOUR CONFIG TARGETS. IMAGE URL LIST BELOW! -->
 
-<img align="left" src="https://github.com/Coopydood/ultimate-macOS-KVM/assets/39441479/8f69f9b9-cf23-4e8b-adf3-95862a23e2ba" height=580 width=2 /> 
+<img align="left" src="https://github.com/Coopydood/ultimate-macOS-KVM/assets/39441479/8f69f9b9-cf23-4e8b-adf3-95862a23e2ba" height=520 width=2 /> 
 <!-- CHANGE THE HEIGHT WHEN ADDING OR REMOVING SUPPORTED OSES TO THE LIST (Default: 520) -->
 
 <h3>macOS Sonoma<br></h3>
@@ -63,6 +63,7 @@ This is the version of macOS that this OpenCore configuration currently targets.
 <h5>macOS Sequoia Beta</h5><br>
 
 <br><br>
+
 
 ***
 
@@ -172,6 +173,25 @@ Internal Speakers
 | model                  |   String   | ``200 Series PCH HD Audio`` |
 | layout-id                |   Data   | ``11000000`` |
 
+<details><summary><h4>📄  Show as property list data</h4><br><sup>Expand this if you want to copy and paste the entries above as <code>.plist</code> data!</summary>
+
+You can paste this data straight into plist editors like ProperTree.
+
+```xml
+<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+<dict>
+  <key>AAPL,slot-name</key>
+  <string>Internal@0,31,3</string>
+  <key>device_type</key>
+  <string>Audio device</string>
+  <key>layout-id</key>
+  <data>EQAAAA==</data>
+  <key>model</key>
+  <string>200 Series PCH HD Audio</string>
+</dict>
+```
+</details><br>
+
 <br>
 
 ### PciRoot(0x0)/Pci(0x2,0x0)
@@ -195,6 +215,49 @@ Intel HD Graphics 630
 | framebuffer-stolenmem    	|   Data   	|        ``00003001``       	|
 | rps-control              	|   Data   	|        ``01000000``       	|
 | model                    	|  String  	| ``Intel HD Graphics 630`` 	|
+
+<details><summary><h4>📄  Show as property list data</h4><br><sup>Expand this if you want to copy and paste the entries above as <code>.plist</code> data!</summary>
+
+You can paste this data straight into plist editors like ProperTree.
+
+```xml
+<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+<dict>
+  <key>AAPL,ig-platform-id</key>
+  <data>AAASWQ==</data>
+  <key>device-id</key>
+  <data>G1kABg==</data>
+  <key>device_type</key>
+  <string>VGA compatible controller</string>
+  <key>disable-agdc</key>
+  <data>AQAAAA==</data>
+  <key>enable-hdmi-dividers-fix</key>
+  <data>AQAAAA==</data>
+  <key>enable-hdmi20</key>
+  <data>AQAAAA==</data>
+  <key>framebuffer-con0-alldata</key>
+  <data>AQUJAAAIAACHAQAA</data>
+  <key>framebuffer-con0-enable</key>
+  <data>AQAAAA==</data>
+  <key>framebuffer-con1-alldata</key>
+  <data>AgQKAAAEAACHAQAA</data>
+  <key>framebuffer-con1-enable</key>
+  <data>AQAAAA==</data>
+  <key>framebuffer-con2-alldata</key>
+  <data>AwYKAAAEAACHAQAA</data>
+  <key>framebuffer-con2-enable</key>
+  <data>AQAAAA==</data>
+  <key>framebuffer-patch-enable</key>
+  <data>AQAAAA==</data>
+  <key>framebuffer-stolenmem</key>
+  <data>AAAwAQ==</data>
+  <key>model</key>
+  <string>Intel HD Graphics 630</string>
+  <key>rps-control</key>
+  <data>AQAAAA==</data>
+</dict>
+```
+</details><br>
 
 > [!NOTE]
 > The framebuffer connector patching was done using [this section of the WhateverGreen Intel guide](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md#intel-uhd-graphics-610-650-kaby-lake-and-amber-lake-y-processors) as a reference.
@@ -289,6 +352,43 @@ Contents stored in NVRAM.
 | prev-lang-diags:kbd       |   Data   |                                 ``656E2D47 42``                                |
 | prev-lang:kbd             |   Data   |                               ``656E2D47 423A32``                              |                                      |
 | StartupMute               |   Data   |                                     ``00``                                     |
+
+<details><summary><h4>📄  Show as property list data</h4><br><sup>Expand this if you want to copy and paste the entries above as <code>.plist</code> data!</summary>
+
+You can paste this data straight into plist editors like ProperTree.
+
+```xml
+<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
+<dict>
+  <key>DefaultBackgroundColor</key>
+  <data>AAAAAA==</data>
+</dict>
+<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
+<dict>
+  <key>rtc-blacklist</key>
+  <data></data>
+</dict>
+<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+<dict>
+  <key>ForceDisplayRotationInEFI</key>
+  <integer>0</integer>
+  <key>SystemAudioVolume</key>
+  <data>Rg==</data>
+  <key>boot-args</key>
+  <string>keepsyms=1 debug=0x100 -cdfon -igfxmpc -igfxcdc igfxrpsc=1 itlwm_cc=GB revpatch=sbvmm</string>
+  <key>prev-lang-diags:kbd</key>
+  <data>ZW4tR0I=</data>
+  <key>prev-lang:kbd</key>
+  <data>ZW4tR0I6Mg==</data>
+  <key>csr-active-config</key>
+  <data>AAAAAA==</data>
+  <key>run-efi-updater</key>
+  <string>No</string>
+  <key>fmm-computer-name</key>
+  <string>iPlex mini</string>
+</dict>
+```
+</details><br>
 
 ***
 
