@@ -77,6 +77,7 @@ This is the version of macOS that this OpenCore configuration currently targets.
 ### Hardware
 
 - [x] iGPU (Intel HD Graphics 630)
+- [x] NVMe drive
 - [x] SATA drive
 - [x] USB 3.1 (XHCI)
 - [x] Ethernet
@@ -140,7 +141,7 @@ The specs of the main system that the OpenCore configuration targets.
 | **Chipset**     |                             OptiPlex 7050 MFF                            |
 | **Generation**  |                           Kaby Lake                          |
 | **Memory**      |                       8 GB DDR4                       |
-| **Storage**     |                     256 GB SATA SSD                    |
+| **Storage**     |                     256 GB NVMe SSD                    |
 | **GPU**         | Intel HD Graphics 630 |
 | **NIC**         |                  Intel I219-LM                  |
 
