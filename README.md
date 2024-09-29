@@ -141,7 +141,7 @@ The specs of the main system that the OpenCore configuration targets.
 | **Chipset**     |                             OptiPlex 7050 MFF                            |
 | **Generation**  |                           Kaby Lake                          |
 | **Memory**      |                       16 GB 2400MHz DDR4                       |
-| **Storage**     |                     256 GB NVMe SSD                    |
+| **Storage**     |                     256 GB NVMe SSD<br>256 GB SATA SSD                    |
 | **GPU**         | Intel HD Graphics 630 |
 | **NIC**         |                  Intel I219-LM                  |
 
