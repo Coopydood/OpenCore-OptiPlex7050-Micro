@@ -140,7 +140,7 @@ The specs of the main system that the OpenCore configuration targets.
 | **CPU**         |                      Intel® Core™ i5-7500T                     |
 | **Chipset**     |                             OptiPlex 7050 MFF                            |
 | **Generation**  |                           Kaby Lake                          |
-| **Memory**      |                       8 GB DDR4                       |
+| **Memory**      |                       16 GB 2400MHz DDR4                       |
 | **Storage**     |                     256 GB NVMe SSD                    |
 | **GPU**         | Intel HD Graphics 630 |
 | **NIC**         |                  Intel I219-LM                  |
