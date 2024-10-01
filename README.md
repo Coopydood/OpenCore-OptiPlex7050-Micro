@@ -144,6 +144,21 @@ The specs of the main system that the OpenCore configuration targets.
 | **GPU**         | Intel HD Graphics 630 |
 | **NIC**         |                  Intel I219-LM                  |
 
+<br>
+
+### Geekbench Scores
+
+| **Intel Core i5-7500T** | **macOS** |
+|-------------------------|-----------|
+| Single Core             | 1,153     |
+| Muti Core               | 3,371     |
+
+| **GPU**                  | **macOS**<br>Metal |
+|--------------------------|--------------------|
+| Intel<br>HD 630 Graphics | 5,984              |
+
+<br>
+
 ***
 
 ## ACPI
