@@ -3,7 +3,7 @@
 
 <img align="left" src="https://github.com/Coopydood/ultimate-macOS-KVM/assets/39441479/8f69f9b9-cf23-4e8b-adf3-95862a23e2ba" height=210 width=1 />
 
-<a href="https://coopydood.github.io/ultimate-macOS-KVM"></a><h3>OpenCore OptiPlex 7050 Micro (Kaby Lake)<br><sub>v1.0.0</sub></h3>
+<a href="https://coopydood.github.io/ultimate-macOS-KVM"></a><h3>OpenCore OptiPlex 7050 Micro (Kaby Lake)<br><sub>v1.0.1</sub></h3>
 
 OpenCore Hackintosh configuration example for the **Dell OptiPlex 7050 Micro Form Factor** with an Intel® Core™ i5-7500T. 
 <br>
