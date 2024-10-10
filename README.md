@@ -1,4 +1,3 @@
-
 <img align="left" height="150" src="https://github.com/user-attachments/assets/b0fce891-4de1-4397-b330-923c316abc65">
 
 <img align="left" src="https://github.com/Coopydood/ultimate-macOS-KVM/assets/39441479/8f69f9b9-cf23-4e8b-adf3-95862a23e2ba" height=210 width=1 />
